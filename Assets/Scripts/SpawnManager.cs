@@ -6,9 +6,11 @@ public class SpawnManager : MonoBehaviourSingleton<SpawnManager>
 {
     [SerializeField] private float _Intervals = 3f;
     [SerializeField] private GameObject _Enemy = null;
+    // TODO: Change enemy spawning speed for difficulty sake
 
     [SerializeField] private GameObject _EnemyContainer = null;
     [SerializeField] private GameObject[] _PowerUps = null;
+    // TODO: for testing purposes, make power up spawn change modifiable
 
     private bool StopSpawning = false;
 
@@ -37,7 +39,6 @@ public class SpawnManager : MonoBehaviourSingleton<SpawnManager>
             // TODO: Make spawning fast according to score
             // TODO: Generate faster and more reactive enemies according to score
             GameObject NewEnemy = Instantiate(_Enemy);
-            Debug.Log("Spawned one at " + NewEnemy.transform.position);
             NewEnemy.transform.parent = _EnemyContainer.transform;
             yield return new WaitForSeconds(_Intervals);
         }

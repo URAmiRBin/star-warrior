@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     private Animator _animator;
 
     void Start() {
+        // FIXME: This returns null for main menu scene
         _animator = gameObject.GetComponent<Animator>();
         _animator.updateMode = AnimatorUpdateMode.UnscaledTime;
     }

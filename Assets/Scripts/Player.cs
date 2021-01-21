@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
 
-
+        // FIXME: Dude, this is dirty af
         if(hInput < 0 && hInput <= _lastHInput) {
             _animator.SetBool("isTurningLeft", true);
         } else if (hInput > 0 && hInput >= _lastHInput) {
@@ -82,7 +82,6 @@ public class Player : MonoBehaviour
         _CoolingDown = (Time.time - _LastShoot) < _FireRate;
         if(Input.GetKeyDown(KeyCode.Space) && !_CoolingDown) {
             if(_TriplePA) {
-                Debug.Log("making 3");
                 GameObject[] lasers = LaserObjectPool.Instance.Get3Objects();
                 for(var i = 0; i < 3; i++){
                     if (lasers[i] != null){
@@ -129,6 +128,8 @@ public class Player : MonoBehaviour
     }
 
     public void ActivatePA(Constants.PowerUps PowerUpType) {
+        // FIXME: Overriding triple power up time does not refresh
+        // TODO: Add score for overriding shield power up
         if (PowerUpType == Constants.PowerUps.triple) {
             _TriplePA = true;
             StartCoroutine(PATime(PowerUpType));
@@ -159,7 +160,6 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Enemy Laser") {
-            Debug.Log("COLLIDED WITH LASER");
             other.gameObject.SetActive(false);
             GetDamage();
         }

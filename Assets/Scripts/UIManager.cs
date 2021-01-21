@@ -52,7 +52,6 @@ public class UIManager : MonoBehaviour
     }
 
     private void ReduceLive() {
-        Debug.Log(_internalLives);
         _livesUI.sprite = _livesSprites[_internalLives--];
     }
 

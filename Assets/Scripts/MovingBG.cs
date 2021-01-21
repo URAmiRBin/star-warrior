@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class MovingBG : MonoBehaviour
 {
-    public float scrollSpeed = 1f;
-    [SerializeField] Texture myTex;
+    [SerializeField] float scrollSpeed = 1f;
+    [SerializeField] Texture myTex = null;
     private float offset = 0;
 
     Renderer rend = null;
     private void Start() {
         rend = GetComponent<Renderer>();
-        rend.material.mainTexture = myTex; 
+        if (myTex != null){
+            rend.material.mainTexture = myTex;
+        }
     }
     void Update()
     {
         offset += Time.deltaTime * scrollSpeed;
         rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
-
     }
 
 

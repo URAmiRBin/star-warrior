@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 {
     public bool _isGameOver = false;
     public bool _isPause = false;
-    [SerializeField] GameObject _pauseMenu;
+    [SerializeField] GameObject _pauseMenu = null;
 
     private void OnEnable() {
         _pauseMenu.SetActive(false);
@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         if(_isGameOver && Input.GetKey(KeyCode.R)) {

@@ -34,7 +34,6 @@ public class Enemy : MonoBehaviour
 
         if (transform.position.y < -(Constants.yRange + Constants.OutOffset) && !_isDead)
         {
-            // Destroy(gameObject);
             transform.position = GetSpawnPoint();
             _canShoot = true;
         }
@@ -44,7 +43,6 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("enemy collided with player");
             other.GetComponent<Player>().GetDamage();
             _animator.SetBool("onEnemyExplosion", true);
             Destroy(GetComponent<BoxCollider2D>());
@@ -93,6 +91,7 @@ public class Enemy : MonoBehaviour
         {
             if (hit[i].collider.gameObject.CompareTag("Player"))
             {
+                // TODO: Add a random delay, it's freaking fast
                 Shoot();
                 break;
             }

@@ -7,7 +7,6 @@ public class PowerUp : MonoBehaviour
     [SerializeField] private float _Speed = 3f;
     [SerializeField] private Constants.PowerUps _PowerUpType = Constants.PowerUps.triple;
     [SerializeField] private AudioClip _powerUpSound = null;
-    // Start is called before the first frame update
     void OnEnable()
     {
         transform.position = GetSpawnPoint();
