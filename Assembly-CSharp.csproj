@@ -50,7 +50,6 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <None Include="Assets\Materials\Shaders\Galaxy.shader" />
      <None Include="Assets\Materials\Shaders\Shield.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

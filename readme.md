@@ -10,6 +10,7 @@ New things I used from this project:
  - Observer Pattern
  - Raycasts
  - Shaders
+ - Particles
  - Object Pools
  - Animation States
  - GUI Layouts
