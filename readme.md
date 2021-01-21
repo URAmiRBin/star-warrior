@@ -14,3 +14,4 @@ New things I used from this project:
  - Object Pools
  - Animation States
  - GUI Layouts
+ - Optimization and Release

@@ -689,7 +689,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &566217607
@@ -1041,7 +1041,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &690288086
@@ -7904,7 +7904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.1
-  myTex: {fileID: 2800000, guid: bbd1e6c6161131f4a88391c7ec7d663f, type: 3}
+  myTex: {fileID: 2800000, guid: f0b06ef551af7864186c98b734611356, type: 3}
 --- !u!64 &2045268688
 MeshCollider:
   m_ObjectHideFlags: 0
