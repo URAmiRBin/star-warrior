@@ -1,4 +1,6 @@
-# Galaxy Shooter
+# Star Warrior
+
+![](logo.png)
 
 This is an arcade unity game about shooting bad guys in space.
 I got the sprites from [this course from Udemy](https://www.udemy.com/course/the-ultimate-guide-to-game-development-with-unity/).
